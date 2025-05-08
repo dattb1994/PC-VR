@@ -1,0 +1,125 @@
+{
+  "beats": [
+    {
+      "time": 0.064,
+      "type": "kick",
+      "intensity": 0.2810508906841278,
+      "accent": false,
+      "spectral_flux": 0.9540160894393921
+    },
+    {
+      "time": 0.987,
+      "type": "snare",
+      "intensity": 0.6735555529594421,
+      "accent": false,
+      "spectral_flux": 0.9137200713157654
+    },
+    {
+      "time": 1.91,
+      "type": "snare",
+      "intensity": 0.8633691668510437,
+      "accent": false,
+      "spectral_flux": 1.414866328239441
+    },
+    {
+      "time": 2.833,
+      "type": "kick",
+      "intensity": 0.4587092101573944,
+      "accent": false,
+      "spectral_flux": 0.7287554740905762
+    },
+    {
+      "time": 3.767,
+      "type": "snare",
+      "intensity": 0.5197869539260864,
+      "accent": false,
+      "spectral_flux": 0.9492497444152832
+    },
+    {
+      "time": 5.602,
+      "type": "kick",
+      "intensity": 0.4206644296646118,
+      "accent": true,
+      "spectral_flux": 2.011897325515747
+    },
+    {
+      "time": 6.525,
+      "type": "snare",
+      "intensity": 0.9010010361671448,
+      "accent": false,
+      "spectral_flux": 1.2024428844451904
+    },
+    {
+      "time": 7.454,
+      "type": "kick",
+      "intensity": 1.0,
+      "accent": false,
+      "spectral_flux": 1.5976065397262573
+    },
+    {
+      "time": 8.377,
+      "type": "kick",
+      "intensity": 0.403495728969574,
+      "accent": false,
+      "spectral_flux": 1.4022221565246582
+    },
+    {
+      "time": 9.3,
+      "type": "kick",
+      "intensity": 0.7230606079101562,
+      "accent": false,
+      "spectral_flux": 1.3136355876922607
+    },
+    {
+      "time": 10.246,
+      "type": "kick",
+      "intensity": 0.3205530345439911,
+      "accent": false,
+      "spectral_flux": 0.6602210402488708
+    },
+    {
+      "time": 11.151,
+      "type": "snare",
+      "intensity": 0.6020466089248657,
+      "accent": false,
+      "spectral_flux": 0.8789436221122742
+    },
+    {
+      "time": 12.074,
+      "type": "snare",
+      "intensity": 0.7813061475753784,
+      "accent": false,
+      "spectral_flux": 0.8206376433372498
+    },
+    {
+      "time": 12.992,
+      "type": "kick",
+      "intensity": 0.4004369080066681,
+      "accent": false,
+      "spectral_flux": 1.0205283164978027
+    },
+    {
+      "time": 13.915,
+      "type": "snare",
+      "intensity": 0.7485104203224182,
+      "accent": false,
+      "spectral_flux": 1.476008653640747
+    }
+  ],
+  "bpm": 130.83465189873417,
+  "analysis_settings": {
+    "sample_rate": 44100,
+    "frame_length": 512,
+    "hop_length": 256,
+    "threshold": 0.3,
+    "min_interval": 0.2,
+    "kick_freq_range": [
+      50,
+      150
+    ],
+    "snare_freq_range": [
+      150,
+      500
+    ]
+  }
+}

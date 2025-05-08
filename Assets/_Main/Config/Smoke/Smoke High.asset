@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1facf3c655e701449bb4f9fc213c0a2, type: 3}
+  m_Name: Smoke High
+  m_EditorClassIdentifier: 
+  gameplayQuality: 1
+  colorIntensity: 10
+  alpha: 5
+  vfxMultiplier: 20
+  particleSize: 5
+  smokeColor: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 1}
+  embersVFXMultiplier: 3
+  embersBurstVFXMultiplier: 3
+  embersParticleSize: 1
+  meshFireCount: 200
+  flameLength: 2
+  flameVFXMultiplier: 10
+  flameParticleSize: 1.2

@@ -1,0 +1,45 @@
+{
+    "name": "RightAxis",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "b878fe8c-dbc9-4248-add7-6ea5418b4419",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "e1682f15-6c41-4719-b54d-b238ad1ae1b7",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7c13d4c1-b424-41f6-838a-85ec6fca3b89",
+                    "path": "<XRController>{RightHand}/primary2DAxisClick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0dd950d9-a5fa-4b5a-97ed-b1fd68d2dc62",
+                    "path": "<XRController>{LeftHand}/primary2DAxisClick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

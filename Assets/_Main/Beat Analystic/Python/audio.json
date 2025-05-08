@@ -1,0 +1,24 @@
+{
+  "beats": [
+    1.963,
+    3.84,
+    5.675,
+    11.221,
+    13.056,
+    14.933,
+    16.768,
+    18.603,
+    20.437,
+    22.315,
+    24.149,
+    25.984,
+    27.861
+  ],
+  "bpm": null,
+  "audio_file": "audio.mp3",
+  "detection_settings": {
+    "threshold": 0.4,
+    "min_interval": 0.6,
+    "frame_length": 2048
+  }
+}

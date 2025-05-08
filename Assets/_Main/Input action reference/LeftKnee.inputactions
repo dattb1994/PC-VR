@@ -1,0 +1,34 @@
+{
+    "name": "LeftKnee",
+    "maps": [
+        {
+            "name": "LeftKnee PCCC",
+            "id": "ac73befa-6a75-4f76-9960-4f9a15623baa",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "71864ee2-8bf7-44e2-b43e-9793c42024bb",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "697fcf9d-f9a3-4b88-80b9-6d8385d30bec",
+                    "path": "<ViveLighthouse>/devicePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

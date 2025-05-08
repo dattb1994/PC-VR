@@ -1,0 +1,4 @@
+https://www.python.org/downloads/windows/
+
+pip install librosa numpy
+

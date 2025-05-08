@@ -1,0 +1,19 @@
+Fire Crawl Speed   : Tốc độ lan truyền lửa trong m / s
+Ignition time: Mất bao lâu để đối tượng bắt lửa.
+	Giây. Đối tượng cần phải chịu ảnh hưởng của ngọn lửa khác; Nếu Ngọn lửa khác bị lấy đi trước khi đánh lửa, đối tượng sẽ nhập vào
+	Làm mát xuống và từ từ quay trở lại tiến trình đánh lửa hiện tại = 0.
+Burn out start: Mất bao lâu để ngọn lửa bắt đầu cháy.
+Burn out length: Chiều dài trong vài giây của việc đốt -> không đốt cháy.
+Isreignitable: Nếu bạn muốn các đối tượng được tái hiện. Hữu ích cho
+	Ví dụ ngọn đuốc không có nghĩa là bị đốt cháy hoàn toàn.
+Use mesh fire: Chỉ dành cho các đối tượng không di chuyển
+Delete after burn-out: Xóa sau khi bị đốt cháy: Xóa đối tượng trò chơi sau khi bị đốt cháy. Sử dụng
+	Điều này chỉ dành cho các đối tượng vô hình nếu bạn không muốn xóa một cách khắc nghiệt
+	tác dụng".
+Max Spread: Nếu bạn muốn giới hạn mức chênh lệch ở một số mét. Để lại nó
+	Số lượng cao nếu bạn muốn nó lan truyền vô hạn
+Check frequency:Tần suất raycast được raycast (chỉ khi lặp lại
+	Raycast được kiểm tra)
+Ignite power multiplier: Nếu một đối tượng có thời gian đốt cháy, bao nhiêu
+	Tiến trình đánh lửa được thêm vào với mỗi raycast. Thời gian đánh lửa hiện tại +=
+	Đất phát sinh hệ số nhân * Time.deltatime.

@@ -63,16 +63,10 @@ public class MenuMain : MonoBehaviour
     }
     public void ResetView()
     {
-        var subsystems = new List<XRInputSubsystem>();
-        SubsystemManager.GetSubsystems(subsystems);
 
-        if (subsystems.Count > 0)
-        {
-            subsystems[0].TryRecenter();
-        }
         offset.localPosition = Vector3.zero;
         offset.localRotation = Quaternion.identity;
-        offset.LookAt(EnvCtrl.Instance.startFire);
+        //offset.LookAt(EnvCtrl.Instance.startFire);
 
         EventManager.EmitEvent(EventKey.onResetView.ToString());
 

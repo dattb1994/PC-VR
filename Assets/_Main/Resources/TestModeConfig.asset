@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b93aeb32fe9dfb4e8cffdcf1ea6a5a0, type: 3}
   m_Name: TestModeConfig
   m_EditorClassIdentifier: 
-  isTestMode: 1
+  isTestMode: 0
   useEquipCms: 0
   typeEnv: 1
   indexEnv: 1
-  typeEquipment: 1
+  typeEquipment: 3
   level: 1
   showWall: 1
   textureSize: 512

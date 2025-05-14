@@ -1,5 +1,6 @@
 ﻿using Autohand;
 using System;
+using TigerForge;
 using UnityEngine;
 
 public class TayNam : MonoBehaviour
@@ -15,6 +16,8 @@ public class TayNam : MonoBehaviour
     public float threshold = 5;
 
     public float angle;
+
+    public FireSteering fireSteering;
 
     //public Transform pivot;
     void Start()
@@ -58,11 +61,14 @@ public class TayNam : MonoBehaviour
     }
     public void OnGrab(Hand arg0, Grabbable arg1)
     {
+        fireSteering.HandleChangeCountGrabbing(true);
         isGrabbing = true;
         UseLimit();
     }
     public void OnRelease(Hand arg0, Grabbable arg1)
     {
+        fireSteering.HandleChangeCountGrabbing(false);
+        EventManager.EmitEvent(EventKey.onEquipmentThrow.ToString());
         isGrabbing = false;
         float angle = hinge.angle;
 

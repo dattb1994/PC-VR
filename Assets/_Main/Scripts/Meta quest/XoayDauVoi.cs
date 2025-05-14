@@ -1,5 +1,6 @@
 ﻿using Autohand;
 using System;
+using TigerForge;
 using UnityEngine;
 
 public class XoayDauVoi : MonoBehaviour
@@ -18,6 +19,8 @@ public class XoayDauVoi : MonoBehaviour
     public bool autoLockWhenRelease = true;
 
     public float Spinkler;
+
+    public FireSteering fireSteering;
 
     //public Transform pivot;
 
@@ -69,12 +72,15 @@ public class XoayDauVoi : MonoBehaviour
     }
     public void OnGrab(Hand arg0, Grabbable arg1)
     {
+        fireSteering.HandleChangeCountGrabbing(true);
         isGrabbing = true;
         PoolingsMng.Instance.Play(3);
         UseLimit();
     }
     public void OnRelease(Hand arg0, Grabbable arg1)
     {
+        fireSteering.HandleChangeCountGrabbing(false);
+        EventManager.EmitEvent(EventKey.onEquipmentThrow.ToString());
         isGrabbing = false;
         float angle = hinge.angle;
 

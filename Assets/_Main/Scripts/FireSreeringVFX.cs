@@ -23,6 +23,7 @@ public class FireSreeringVFX : HoseParticle
             var equipStr = GameManager.Instance.equipConfig;
             water.GetComponent<ParticleExtinguish>().particleExtinquishRadius = equipStr.radius;
             water.GetComponent<ParticleExtinguish>().incrementalPower = equipStr.power;
+            print(11111);
         }
         EventManager.StartListening(EventKey.onEffectIntensityChanged.ToString(), OnEffectIntensityChanged);
 
@@ -35,10 +36,8 @@ public class FireSreeringVFX : HoseParticle
         emissionWater.rateOverTime = 100 * v;
 
         var emissionSmoke = vfxSmoke.emission;
-        emissionSmoke.rateOverTime = 20 * v;
+        emissionSmoke.rateOverTime = 15 * v;
     }
-
-
     internal override void OnEffectIntensityChanged()
     {
         base.OnEffectIntensityChanged();
@@ -46,10 +45,10 @@ public class FireSreeringVFX : HoseParticle
         float v = Mathf.Lerp(0.5f, 2, effectIndensity);
 
         var emissionWater = vfxWater.emission;
-        emissionWater.rateOverTime = 200 * v;
+        emissionWater.rateOverTime = 100 * v;
 
         var emissionSmoke = vfxSmoke.emission;
-        emissionSmoke.rateOverTime = 20 * v;
+        emissionSmoke.rateOverTime = 15 * v;
     }
     public override void HandleIsOnChanged()
     {

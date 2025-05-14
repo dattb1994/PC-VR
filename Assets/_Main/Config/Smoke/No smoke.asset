@@ -21,7 +21,7 @@ MonoBehaviour:
   embersVFXMultiplier: 0
   embersBurstVFXMultiplier: 0
   embersParticleSize: 0
-  meshFireCount: 50
+  meshFireCount: 10
   flameLength: 1
   flameVFXMultiplier: 2
   flameParticleSize: 1

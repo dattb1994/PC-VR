@@ -35,6 +35,7 @@ public class MenuManager : Singleton<MenuManager>
 
     IEnumerator Start()
     {
+        SwitchSceneBlurEffect.Instance.ForceShowBlur();
         QualitySettings.SetQualityLevel(1, true);
         Application.targetFrameRate = 72;
         yield return new WaitForEndOfFrame();
@@ -54,6 +55,8 @@ public class MenuManager : Singleton<MenuManager>
         {
             gridRoom.GetChild(i).gameObject.SetActive(i < roomSetting.maxRoom);
         }
+        yield return new WaitForEndOfFrame();
+        SwitchSceneBlurEffect.Instance.HideBlur();
     }
     public void KhoiTaoGame()
     {

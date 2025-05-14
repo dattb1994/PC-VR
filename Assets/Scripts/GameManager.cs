@@ -1,4 +1,5 @@
 using Autohand;
+using Autohand.Demo;
 using DG.Tweening;
 using Ignis;
 using Meta.Voice.Net.WebSockets;
@@ -26,11 +27,10 @@ public class GameManager : Singleton<GameManager>
 
     public MenuMain menuMain;
 
-    public Transform xrOrigin;
+    public Transform TrackerOffsets;
     public GameObject hintMenu, hintResetView;
 
     bool isResetView = false;
-
     IEnumerator Start()
     {
         QualitySettings.SetQualityLevel(GameConfig.FlameConfig.smokeConfig.gameplayQuality, true);
@@ -88,7 +88,7 @@ public class GameManager : Singleton<GameManager>
                     isAdmin: ApiFromCms.Instance.adminLogin.objectData.isAdmin,
                     tokenKey: ApiFromCms.Instance.adminLogin.objectData.tokenKey,
                     currentLanguage: ApiFromCms.Instance.userLogin.objectData.currentLanguage,
-                    formObject: null); 
+                    formObject: null);
         }
         yield return new WaitForSeconds(2);
         menuMain.ResetView();
@@ -104,12 +104,23 @@ public class GameManager : Singleton<GameManager>
 
     private void EquipmentThrowHandle()
     {
-        DOVirtual.DelayedCall(.2f, ResetViewHandle);
+        bool isThrow = false;
+        if (indexEquip == TypeEquip.Steering)
+        {
+            isThrow = equipObj.transform.GetChild(0).GetComponent<FireSteering>().countGrabing == 0;
+            print($"FireSteering isThrow {isThrow}");
+        }
+        else
+        {
+            isThrow = equipObj.GetComponent<AutoGrab>().countGrabing == 0;
+        }
+
+        if(isThrow)
+            DOVirtual.DelayedCall(.2f, ResetViewHandle);
     }
 
     private void ResetViewHandle()
     {
-        print("ResetView equipObj");
         Vector3 cam = Camera.main.transform.position;
         Vector3 B = EnvCtrl.Instance.startFire.position;
         Vector3 A = new Vector3(cam.x, B.y, cam.z);
@@ -129,12 +140,11 @@ public class GameManager : Singleton<GameManager>
         rig.isKinematic = true;
         rig.transform.DOMove(new Vector3(x.x, player.position.y, x.z), .5f);
         rig.transform.rotation = Quaternion.Euler(0, 0, 0);
-
     }
     public void ShowHintResetView()
     {
         if (!isResetView)
-        { 
+        {
             hintResetView.SetActive(true);
         }
     }
@@ -223,6 +233,7 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+   
 }
 public enum TypeEquip
 {

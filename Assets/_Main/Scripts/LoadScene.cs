@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.XR;
 
 public class LoadScene : MonoBehaviour
 {
@@ -11,8 +12,13 @@ public class LoadScene : MonoBehaviour
     public string sceneToLoad = "GameScene";
 
     public RectTransform a, b, img;
+
+    public Transform offset;
+
     private IEnumerator Start()
     {
+        //AlignToHead();
+        //Camera.main.transform.SetLocalPositionAndRotation(new Vector3(0,Camera.main.transform.localPosition.y,0), Quaternion.identity);
         Resources.UnloadUnusedAssets();
         sceneToLoad = GameSetting.sceneToLoad;
         SwitchSceneBlurEffect.Instance.ForceShowBlur();
@@ -20,9 +26,22 @@ public class LoadScene : MonoBehaviour
         yield return new WaitForSeconds(1f);
         StartCoroutine(LoadSceneRoutine());
     }
+    void AlignToHead()
+    {
+        // Lấy hướng nhìn của người chơi (Main Camera)
+        Transform head = Camera.main.transform;
+
+        // Chỉ lấy hướng theo mặt phẳng ngang (loại bỏ góc cúi/ngửa)
+        Vector3 flatForward = Vector3.ProjectOnPlane(head.forward, Vector3.up).normalized;
+
+        // Xoay GameObject này (XR Rig) để hướng theo camera
+        offset.rotation = Quaternion.LookRotation(flatForward, Vector3.up);
+    }
     private void Update()
     {
         img.position = Vector3.Lerp(a.position, b.position, Mathf.PingPong((float)fakeProgress / 100, 1));
+
+        //AlignToHead();
     }
     public float fakeProgress = 0f;
     IEnumerator LoadSceneRoutine()

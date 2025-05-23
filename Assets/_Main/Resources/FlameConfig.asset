@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FlameConfig
   m_EditorClassIdentifier: 
   clampTimeBurnLength: {x: 100, y: 200}
-  smokeConfig: {fileID: 11400000, guid: 306409be174bd304d8068255bf2122b2, type: 2}
+  smokeConfig: {fileID: 11400000, guid: 27365b3cea1ee924baff7db6cd07bb4d, type: 2}
   customFireSFX: {fileID: 4930141926180399095, guid: 40c70d6654dff5845b17e9d3cd663ca2,
     type: 3}

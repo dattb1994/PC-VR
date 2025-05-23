@@ -15,8 +15,8 @@ MonoBehaviour:
   isTestMode: 0
   useEquipCms: 0
   typeEnv: 1
-  indexEnv: 1
-  typeEquipment: 3
+  indexEnv: 5
+  typeEquipment: 0
   level: 1
   showWall: 1
   textureSize: 512

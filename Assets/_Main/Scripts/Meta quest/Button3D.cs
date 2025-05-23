@@ -14,26 +14,15 @@ public class Button3D : MonoBehaviour
     //public MenuMain menuMain;
     private void Start()
     {
-        //touchEvent = GetComponent<HandTouchEvent>();
-        //touchEvent.HandStartTouch.AddListener((Hand) =>
-        //{
-        //    if (!interact)
-        //        return;
-
-        //    transform.DOScale(startScale * .8f, .2f);
-        //    DOVirtual.DelayedCall(.2f, () =>
-        //    {
-        //        transform.DOScale(startScale, .2f);
-        //        onTouchBegin?.Invoke();
-        //    });
-        //});
         startScale = transform.localScale;
     }
     public void OnTouchBegin(ToucherIndex toucher)
     {
+        print(2222);
         if (!interact)
             return;
 
+        print(333333333);
         transform.DOScale(startScale * .8f, .2f);
         DOVirtual.DelayedCall(.2f, () =>
         {
@@ -44,4 +33,5 @@ public class Button3D : MonoBehaviour
 
         //menuMain.JustClick();
     }
-}
+}                                       
+

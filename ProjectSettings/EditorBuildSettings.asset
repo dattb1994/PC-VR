@@ -17,6 +17,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Main/Scenes/Fire Fighting Bedroom/1.unity
     guid: b2e2bf0041b2a49429a739ec6c3c2736
+  - enabled: 1
+    path: Assets/_Main/Scenes/Fire Fighting Bedroom/2.unity
+    guid: 655a62c38b51c0943ba9ae806bcb57c0
+  - enabled: 1
+    path: Assets/_Main/Scenes/Fire Fighting Bedroom/3.unity
+    guid: 1e46a1ec0fa0645489068828dc791dcb
+  - enabled: 1
+    path: Assets/_Main/Scenes/Fire Fighting Bedroom/4.unity
+    guid: 229c8a5448553c24ba53c357f5e252cb
+  - enabled: 1
+    path: Assets/_Main/Scenes/Fire Fighting Bedroom/5.unity
+    guid: a093fa70cd7bf6f438270d0b1655f6ea
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 398d945149746a94899cafbfeddf8c9f,
       type: 2}

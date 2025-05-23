@@ -21,6 +21,7 @@ public class ToucherIndex : MonoBehaviour
                 var btn = item.gameObject.GetComponent<Button3D>();
                 if (btn != null)
                 {
+                    print(11111111);
                     btn.OnTouchBegin(this);
                 }
             }

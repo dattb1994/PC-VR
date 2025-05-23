@@ -2,7 +2,6 @@ using Autohand.Demo;
 using Ignis;
 using TigerForge;
 using UnityEngine;
-using static EnvCtrl;
 public class FireSreeringVFX : HoseParticle
 {
     [SerializeField] float thresholdChangeMode = .8f;
